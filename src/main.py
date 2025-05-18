@@ -12,7 +12,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 logging.basicConfig(level=logging.INFO)
 
-BOT_TOKEN_ENV_VAR: os.environ["TG_BOT_TOKEN"]
+BOT_TOKEN_ENV_VAR = os.getenv("TG_BOT_TOKEN")
 BOT_TOKEN = BOT_TOKEN_ENV_VAR
 
 bot = Bot(token=BOT_TOKEN)
