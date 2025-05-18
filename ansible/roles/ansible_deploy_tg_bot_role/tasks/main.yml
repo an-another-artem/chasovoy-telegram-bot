@@ -1,9 +1,9 @@
-#SPDX-License-Identifier: MIT-0
+#SPDX-License-Identifier: MIT @Copyright 2025 yet.another.artem
 ---
 # tasks file for ansible_deploy_tg_application_role
 - name: Install Docker on remote system
-  xiaoyao9184.docker:
-    docker_users: "{{ docker_user }}"
+  ansible.builtin.include_role:
+    name: "xiaoyao9184.docker"
 - name: Pull Docker image
   community.docker.docker_image:
     name: "ananotherartem/chasovoy-tg-bot:latest"
