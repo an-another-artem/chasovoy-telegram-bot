@@ -1,3 +1,10 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # tasks file for ansible_deploy_tg_application_role
+- name: Install Docker on remote system
+  xiaoyao9184.docker:
+    docker_users: "{{ docker_user }}"
+- name: Pull Docker image
+  community.docker.docker_image:
+    name: "ananotherartem/chasovoy-tg-bot:latest"
+    source: "pull"
