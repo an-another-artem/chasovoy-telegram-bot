@@ -13,3 +13,5 @@
     name: "chasovoy-tg-bot"
     image: "ananotherartem/chasovoy-tg-bot:latest"
     env: "{{ env_vars }}"
+    volumes: "{{ item }}"
+  loop: "{{ volumes }}"
