@@ -1,0 +1,5 @@
+- name: Deploy Chasovoy bot
+  remote_user: root
+  hosts: stage_servers
+  roles:
+    - ansible_deploy_tg_bot_role
