@@ -8,3 +8,8 @@
   community.docker.docker_image:
     name: "ananotherartem/chasovoy-tg-bot:latest"
     source: "pull"
+- name: Run Docker container
+  community.docker.docker_container:
+    name: "chasovoy-tg-bot"
+    image: "ananotherartem/chasovoy-tg-bot:latest"
+    env: "{{ env_vars }}"
